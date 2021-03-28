@@ -1,0 +1,132 @@
+// css的初始化
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+body {
+    background: url(../images/images/bg.jpg) no-repeat top center;
+    line-height: 1.15;
+}
+// 头部
+header {
+    position: relative;
+    height: 1.25rem;
+    background: url(../images/images/head_bg.png) no-repeat;
+    background-size: 100% 100%;
+    h1 {
+        font-size: 0.475rem;
+        color: #fff;
+        line-height: 1rem;
+        text-align: center;
+    }
+    .showTime {
+        position: absolute;
+        top: 0;
+        right: 0.375rem;
+        line-height: 0.9375rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.25rem;
+    }
+}
+// 主体部分
+.mainbox {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0.125rem 0.125rem 0;
+    display: flex;
+    .column {
+        flex: 3;
+    }
+    &:nth-child(2) {
+        flex: 5;
+    }
+    .panel {
+        position: relative;
+        height: 3.875rem;
+        padding: 0 0.1875rem 0.5rem;
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        margin-bottom: 0.1875rem;
+        background: url(../images/images/line\(1\).png) rgba(255, 255, 255, 0.3);
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.125rem;
+            height: 0.125rem;
+            border-top: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
+            content: "";
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
+        }
+        .panel-footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-bottom: 2px solid #02a6b5;
+                border-left: 2px solid #02a6b5;
+            }
+            &::after {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-bottom: 2px solid #02a6b5;
+                border-right: 2px solid #02a6b5;
+            }
+        }
+        h2 {
+            height: 0.6rem;
+            color: #fff;
+            font-size: 0.25rem;
+            line-height: 0.6rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        .chart {
+            height: 3rem;
+            background-color: pink;
+        }
+    }
+    // 中间数据模块
+    .no {
+        background: rgba(101, 132, 226, 0.1);
+        padding: 0.1875rem;
+    }
+    .no-hd {
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                line-height: 1rem;
+                font-size: 0.875rem;
+                color: #ffeb7b;
+                text-align: center;
+            }
+        }
+    }
+}
